@@ -11,7 +11,6 @@ Patch: id3v2-0.1.11-remove-bad-free.patch
 License:	GPL
 Group:		Sound
 URL:		http://id3v2.sourceforge.net/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	libid3-devel
 
 %description
