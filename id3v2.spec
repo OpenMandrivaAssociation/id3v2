@@ -1,6 +1,6 @@
 %define	name	id3v2
 %define	version	0.1.11
-%define	release %mkrel 7
+%define	release %mkrel 9
 
 Summary:	A command line id3v2 tag editor
 Name:		%{name}
