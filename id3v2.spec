@@ -22,7 +22,8 @@ id3v1 tags to id3v2 tags.
 %setup -q
 
 %build
-%make clean all
+%make clean
+%make
 
 %install
 rm -rf $RPM_BUILD_ROOT
