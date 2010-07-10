@@ -1,14 +1,13 @@
 %define	name	id3v2
-%define	version	0.1.11
-%define	release %mkrel 9
+%define	version	0.1.12
+%define	release %mkrel 1
 
 Summary:	A command line id3v2 tag editor
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Source0:	http://prdownloads.sourceforge.net/id3v2/%{name}-%{version}.tar.bz2
-Patch: id3v2-0.1.11-remove-bad-free.patch
-License:	GPL
+License:	GPLv2+
 Group:		Sound
 URL:		http://id3v2.sourceforge.net/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -21,7 +20,6 @@ id3v1 tags to id3v2 tags.
 
 %prep
 %setup -q
-%patch -p1
 
 %build
 %make clean all
