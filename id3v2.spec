@@ -1,16 +1,12 @@
-%define	name	id3v2
-%define	version	0.1.12
-%define release  3
-
 Summary:	A command line id3v2 tag editor
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		id3v2
+Version:	0.1.12
+Release:	3
 Source0:	http://prdownloads.sourceforge.net/id3v2/%{name}-%{version}.tar.bz2
 License:	GPLv2+
 Group:		Sound
 URL:		http://id3v2.sourceforge.net/
-BuildRequires:	pkgconfig(id3tag)
+BuildRequires:	libid3-devel
 
 %description
 id3v2 is a command line id3v2 tag editor.
@@ -25,15 +21,12 @@ id3v1 tags to id3v2 tags.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
 install -m755 id3v2 -D $RPM_BUILD_ROOT%{_bindir}/id3v2
 install -m644 id3v2.1 -D $RPM_BUILD_ROOT%{_mandir}/man1/id3v2.1
 
 %clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root)
 %doc README INSTALL
 %{_bindir}/id3v2
 %{_mandir}/man1/id3v2.1*
