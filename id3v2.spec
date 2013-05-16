@@ -11,7 +11,7 @@ License:	GPLv2+
 Group:		Sound
 URL:		http://id3v2.sourceforge.net/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	libid3-devel
+BuildRequires:	pkgconfig(id3tag)
 
 %description
 id3v2 is a command line id3v2 tag editor.
