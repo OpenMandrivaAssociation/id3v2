@@ -1,7 +1,7 @@
 Summary:	A command line id3v2 tag editor
 Name:		id3v2
 Version:	0.1.12
-Release:	3
+Release:	4
 Source0:	http://prdownloads.sourceforge.net/id3v2/%{name}-%{version}.tar.bz2
 License:	GPLv2+
 Group:		Sound
