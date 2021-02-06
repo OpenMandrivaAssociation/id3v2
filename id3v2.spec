@@ -9,6 +9,7 @@ License:	GPLv2+
 Group:		Sound
 URL:		http://id3v2.sourceforge.net/
 BuildRequires:	id3lib-devel
+BuildRequires:	pkgconfig(zlib)
 
 %description
 id3v2 is a command line id3v2 tag editor.
@@ -17,10 +18,11 @@ id3v1 tags to id3v2 tags.
 
 %prep
 %setup -q
+sed -i -e 's|-Wall|%{optflags} -Wall|' Makefile
 
 %build
 %make clean
-%make
+%make_build CC=%{__cc} CXX=%{__cxx}
 
 %install
 install -m755 id3v2 -D $RPM_BUILD_ROOT%{_bindir}/id3v2
