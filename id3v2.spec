@@ -7,7 +7,7 @@ Release:	6
 Source0:	http://prdownloads.sourceforge.net/id3v2/%{name}-%{version}.tar.bz2
 License:	GPLv2+
 Group:		Sound
-URL:		http://id3v2.sourceforge.net/
+URL:		https://id3v2.sourceforge.net/
 BuildRequires:	id3lib-devel
 BuildRequires:	pkgconfig(zlib)
 
